@@ -1,0 +1,51 @@
+Code,State,County,Year,Days with AQI,Good,Moderate,Unhealthy for Sensitive Groups,Unhealthy,Very Unhealthy,Hazardous,Max AQI,90th Percentile AQI,Median AQI,Days CO,Days NO2,Days Ozone,Days SO2,Days PM2.5,Days PM10,Condition
+AL,Alabama,Jefferson,1999,365,19,235,71,34,6,0,273,152,82,36,0,66,16,223,24,Moderate
+AK,Alaska,Juneau ,1991,360,289,54,13,2,0,0,844,70,19,0,0,0,0,0,360,Good
+AZ,Arizona,Pinal,2011,365,70,180,76,17,9,5,2212,155,83,0,0,72,0,7,286,Moderate
+AR,Arkansas,Pulaski,2007,365,154,189,18,3,1,0,235,87,54,0,4,109,0,251,1,Moderate
+CA,California,Inyo,2001,365,155,138,32,6,2,7,20646,184,58,0,0,281,0,2,82,Good
+CO,Colorado,Prowers,2013,361,324,30,5,0,1,0,1116,51,18,0,0,0,0,0,361,Good
+CT,Connecticut,New Haven,1980,366,157,134,40,16,19,0,295,150,59,13,0,131,222,0,0,Good
+DE,Delaware,New Castle,1988,344,54,151,96,19,24,0,266,169,93,1,39,92,209,0,3,Moderate
+FL,Florida,Leon,2007,365,150,193,14,7,0,1,326,84,54,0,0,74,0,291,0,Moderate
+GA,Georgia,Richmond,2017,90,66,23,0,0,0,1,364,63,43,0,0,23,4,62,1,Good
+HI,Hawaii,Hawaii,2010,365,1,20,78,244,16,5,532,200,200,0,0,0,357,8,0,Unhealthy for Sensitive Groups
+ID,Idaho,Power,1999,327,40,172,60,51,3,1,489,159,82,0,0,0,0,272,55,Moderate
+IL,Illinois,Cook,1988,366,52,190,85,22,17,0,285,151,81,2,87,85,185,0,7,Moderate
+IN,Indiana,Porter,1996,366,236,98,24,5,2,0,504,96,44,0,0,135,191,0,40,Good
+IA,Iowa,Polk,1998,365,351,13,0,0,1,0,246,42,28,113,0,217,0,0,35,Good
+KS,Kansas,Wyandotte,2005,364,234,110,17,2,1,0,210,87,44,3,99,155,19,85,3,Good
+KY,Kentucky,Kenton,1988,366,240,50,24,35,17,0,253,169,34,162,0,204,0,0,0,Good
+LA,Louisiana,East Baton Rouge,1982,365,226,99,25,9,6,0,259,108,44,8,0,249,108,0,0,Good
+ME,Maine,Knox,1988,223,151,39,12,10,11,0,261,147,44,0,0,193,0,0,30,Good
+MD,Maryland,Baltimore,1988,366,146,135,37,22,26,0,261,177,58,6,85,144,131,0,0,Good
+MA,Massachusetts,Suffolk,1982,365,27,203,129,4,2,0,271,117,87,51,55,14,245,0,0,Moderate
+MI,Michigan,Bay,1992,250,212,36,0,1,0,1,387,57,24,0,0,0,0,0,250,Good
+MN,Minnesota,Saint Louis,1985,360,293,64,2,0,0,1,427,59,33,235,0,0,45,0,80,Good
+MS,Mississippi,DeSoto,1988,270,172,60,30,7,1,0,219,115,44,0,0,270,0,0,0,Good
+MO,Missouri,Howell,1996,204,104,44,17,3,3,11,1608,509,49,0,0,0,0,0,204,Good
+MT,Montana,Park,1989,66,52,8,2,0,0,1,1292,100,17,0,0,0,0,0,66,Good
+NE,Nebraska,Lancaster,1981,365,306,44,7,3,5,0,267,64,32,195,0,170,0,0,0,Good
+NV,Nevada,Washoe,2013,365,151,179,17,4,0,0,895,99,54,0,1,198,0,111,55,Moderate
+NH,New Hampshire,Rockingham,1988,363,240,73,27,17,6,0,248,107,40,0,0,166,194,0,3,Good
+NJ,New Jersey,Burlington,1980,325,110,113,53,26,23,0,286,182,64,43,11,160,111,0,0,Moderate
+NM,New Mexico,Dona Ana,2012,366,149,186,23,1,1,3,1635,97,54,0,7,224,0,11,124,Moderate
+NY,New York,Richmond,1981,329,138,107,61,13,10,0,279,135,58,0,0,153,176,0,0,Good
+NC,North Carolina,Mecklenburg,1988,366,156,124,47,20,19,0,248,151,58,140,0,224,0,0,2,Good
+ND,North Dakota,McKenzie,2011,364,319,44,0,0,1,0,262,52,41,0,0,180,10,174,0,Good
+OH,Ohio,Jefferson,1987,365,52,150,123,35,4,1,377,157,94,14,8,22,276,0,45,Moderate
+OK,Oklahoma,Tulsa,1980,366,79,166,92,21,8,0,245,140,77,66,49,151,100,0,0,Moderate
+OR,Oregon,Klamath,1988,259,142,86,20,6,1,2,688,114,45,79,0,0,0,32,148,Good
+PA,Pennsylvania,Allegheny,1988,366,15,90,173,65,22,0,528,200,115,1,13,49,300,0,3,Unhealthy for Sensitive Groups
+RI,Rhode Island,Kent,1984,300,198,51,24,15,12,0,281,143,42,0,0,300,0,0,0,Good
+SC,South Carolina,Richland,2006,365,137,198,27,2,1,0,253,97,58,0,6,146,12,200,1,Moderate
+SD,South Dakota,Custer,2009,365,334,27,1,2,0,1,354,50,37,0,0,231,0,122,12,Good
+TN,Tennessee,Hamilton,1983,365,230,68,49,15,2,1,346,126,43,0,0,365,0,0,0,Good
+TX,Texas,El Paso,2003,365,104,212,38,6,1,2,1032,110,60,7,47,152,1,48,110,Moderate
+UT,Utah,Salt Lake,2010,365,197,145,15,7,0,0,501,90,49,0,7,197,9,120,32,Good
+VT,Vermont,Bennington,1988,194,130,31,22,9,2,0,214,122,44,0,0,194,0,0,0,Good
+VA,Virginia,Fairfax,1981,365,172,147,31,13,2,0,256,112,52,37,114,113,101,0,0,Good
+WA,Washington,Benton,1991,281,254,20,3,2,0,0,1585,50,22,0,0,0,0,0,281,Good
+WV,West Virginia,Brooke,1994,365,110,142,87,23,3,0,281,139,67,4,0,0,323,0,38,Moderate
+WI,Wisconsin,Milwaukee,1987,365,182,115,47,11,10,0,300,126,51,5,128,95,128,0,9,Good
+WY,Wyoming,Lincoln,1994,360,239,93,17,5,1,3,777,88,34,0,0,0,0,0,360,Good
