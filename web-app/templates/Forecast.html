@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+
+{% block content %}
+<div class="container">
+<form method="POST" action="/prediction" id="predict">
+ 
+<div class="form-group">     
+	{{ form.state.label }}
+	{{ form.state }}
+</div>
+<div class="form-group">      	
+	{{ form.county.label }}
+	{{ form.county }}
+</div>
+<div class="form-group">      	
+	{{ form.date.label }}
+	{{ form.date }}
+</div>
+ {{ form.submit(class="btn-primary") }}
+</form>
+
+<h2> Predicated AQI: {{ pmAQI[0] }}</h2>
+</div>
+
+</div>
+
+{% endblock %}

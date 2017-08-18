@@ -1,0 +1,52 @@
+{% extends "mainpage.html" %}
+
+{% block content %}
+<div class="container">
+
+<h2>AQI Forecasting</h2>
+<div class="btn-group" role="group" aria-label="Samples">
+<button type="button" class="btn btn-primary btn-lg" id= "case1">Case1</button>
+</div>
+<br><br><br>
+<form method="POST" action="/prediction" id="predict">
+ 
+<div class="form-group" style="display:none;">     
+	{{ form.state.label }}
+	{{ form.state }}
+</div>
+<div class="form-group">      	
+	{{ form.county.label }}
+	{{ form.county }}
+</div>
+<div class="form-group">      	
+	{{ form.date.label }}
+	{{ form.date }}
+</div>
+ {{ form.submit(class="btn-primary") }}
+</form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script>
+	function populate(form, data) {
+	  $.each(data, function(key, value){
+	    $('[name='+key+']', form).val(value);
+	  });
+	}
+	
+data1 =	
+		{	'state' : "25" ,
+			'county': "25",   
+			'date': "08222017",   
+		};
+		
+		
+	$(document).ready(function(){
+	$("#case1").click(function(){
+       populate('#predict', data1);
+    });
+	});
+	
+	
+  </script>
+{% endblock %}
