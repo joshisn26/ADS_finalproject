@@ -6,8 +6,9 @@
 docker pull joshisn/finalproject1:final
 ```
 
-
+```
 docker run -ti joshisn/finalproject1:final --module UploadData UploadAll --local-scheduler --id <AWS_access_id>  --key <AWS_secrate_key>
+```
 
 
 ## Proposal Video Link
