@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container">
 <form method="POST" action="/prediction" id="predict">
- 
+<h2>Predict</h2>
 <div class="form-group">     
 	{{ form.state.label }}
 	{{ form.state }}
@@ -19,7 +19,26 @@
  {{ form.submit(class="btn-primary") }}
 </form>
 
-<h2> Predicated AQI: {{ pmAQI[0] }}</h2>
+<h3>PM2.5</h3>
+{% if flag %}
+    <h4> Predicated AQI: {{ AQI[0] }}<div>   Message: {{msgpm25}}</div></h4>
+		
+{% else %}
+		<h4> Predicated AQI: </h4>
+{% endif %}
+ 
+ 
+ 
+ <h3>Ozone</h3>
+{% if flag %}
+    <h4> Predicated AQI: {{ AQI[1] }}<div>Message: {{msgozone}}</div></h4>
+			
+ {% else %}
+     <h4> Predicated AQI: </h4>
+{% endif %}
+ 
+ 
+
 </div>
 
 </div>

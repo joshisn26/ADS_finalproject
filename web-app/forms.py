@@ -5,7 +5,7 @@ from wtforms.fields.html5 import DateField
 
 class predictionForm(Form):
 	state = SelectField('state', choices=[(25, 'Massachuastte'), (36, 'New York'), (6, 'California')])
-	county = IntegerField('county', validators = [validators.required()])
+	county = SelectField('state', choices=[(5, 'NY-Bronx'), (55, 'NY-Monroe'), (6, 'California')])
 	date = DateField('date' ,format='%Y-%m-%d',validators= [validators.required()])
 	submit = SubmitField("Get AQI")
 	
