@@ -1,0 +1,86 @@
+{% extends "main.html" %}
+
+{% block content %}
+<div class="container">
+<h2>Get State Pollution Condition</h2>
+<div class="btn-group" role="group" aria-label="Samples">
+<button type="button" class="btn btn-primary btn-lg" id= "case1">Case1</button>
+<button type="button" class="btn btn-primary btn-lg" id="case2">Case2</button>
+</div>
+
+
+<form method="POST" action="/condition" id="case">
+<h2>Predict</h2>
+<div class="form-group">     
+	{{ form.state.label }}
+	{{ form.state }}
+</div>
+<div class="form-group">      	
+	{{ form.county.label }}
+	{{ form.county }}
+</div>
+<div class="form-group">      	
+	{{ form.year.label }}
+	{{ form.year }}
+</div>
+<div class="form-group">      	
+	{{ form.maxaqi.label }}
+	{{ form.maxaqi }}
+</div>
+<div class="form-group">      	
+	{{ form.percentile.label }}
+	{{ form.percentile }}
+</div>
+<div class="form-group">      	
+	{{ form.medianaqi.label }}
+	{{ form.medianaqi }}
+</div>
+ {{ form.submit(class="btn-primary") }}
+</form>
+
+<h3>Condition of State</h3>
+{% if flag %}
+    <h4> Condition: {{ cond[0] }}</h4>
+
+{% endif %}
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script>
+	function populate(form, data) {
+		
+	  $.each(data, function(key, value){
+	    $('[name='+key+']', form).val(value);
+	  });
+	}
+	
+data1 =	
+		{	'state' : "Florida" ,
+			'county': "Miami",   
+			'year': '2000',   
+			'maxaqi': '147',   
+			'percentile': '71',   
+			'medianaqi': '47',   
+		};
+		
+data2 =	
+		{	'state' : "Florida" ,
+			'county': "Hillsborough",   
+			'year': "1992",   
+			'maxaqi': "200",   
+			'percentile': "134",   
+			'medianaqi': "95",   
+		};
+		
+	$(document).ready(function(){
+	$("#case1").click(function(){
+       populate('#case', data1);
+    });
+	$("#case2").click(function(){
+       populate('#case', data2);
+    });
+	});
+ </script>
+{% endblock %}

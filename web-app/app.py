@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session, redirect, url_for
-from forms import predictionForm
+from forms import predictionForm, classificationForm
 import json
 import urllib.request
 
@@ -61,9 +61,12 @@ def prediction():
 	if request.method == "POST":
 		state = form.state.data
 		county = form.county.data
-		am = 0
-		mv= 0
-		hr = 0
+		pam = 0
+		oam = 0
+		pmv= 0
+		omv = 0
+		phr = 0
+		ohr = 0
 		print("state before", state, county)
 		if (state == '36'):
 			if str(county) == '5':
@@ -144,6 +147,62 @@ def prediction():
 		print("flag false")
 		return render_template('Forecast.html',form=form, flag = False )
 		
+		
+@app.route("/condition", methods =["GET" , "POST"])
+def condition():
+	form =  classificationForm()
+	if request.method == "POST":
+		state = str(form.state.data)
+		county = str(form.county.data)
+		year = str(form.year.data)
+		maxaqi =  str(form.maxaqi.data)
+		percentile = str(form.percentile.data)
+		medianaqi = str(form.medianaqi.data)
+		data = {
+			"Inputs": {
+				"input1":
+				[
+					{
+							'State':  state , 
+							'County': county,   
+							'Year': year,   
+							'Max AQI': maxaqi,   
+							'90th Percentile AQI': percentile,   
+							'Median AQI': medianaqi,   
+					}
+				],
+			},
+			"GlobalParameters":  {
+			}
+		}
+
+		body = str.encode(json.dumps(data))
+
+		url = 'https://ussouthcentral.services.azureml.net/workspaces/d94007c736f1444eac6bbe2e88d68fcb/services/a4aac828c0d349fdb11b6afe024b2ba7/execute?api-version=2.0&format=swagger'
+		api_key = 'jeaOydRWlPoCbIlFAcJNe63jZB187kT/XFEExNG3D3wpZ0NijKxMRHUfPBdbSaMAroDDAzsJdDA2ELjVIsUzCQ=='
+
+		headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
+
+		req = urllib.request.Request(url, body, headers)
+		output = []
+		try:
+			response = urllib.request.urlopen(req)
+
+			result = response.read()
+			response_dict = json.loads(result)
+			output.append(response_dict['Results']['output1'][0]["Scored Labels"])
+			print(result)
+		except urllib.error.HTTPError as error:
+			print("The request failed with status code: " + str(error.code))
+
+			# Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
+			print(error.info())
+			print(json.loads(error.read().decode("utf8", 'ignore')))
+		
+		return render_template('GetCondition.html', form=form,cond = output, flag = True)
+	elif request.method == 'GET':
+		print("flag false")
+		return render_template('GetCondition.html',form=form, flag = False )
 		
 @app.route("/")
 def home():
